@@ -19,9 +19,9 @@ async function deleteById(id) {
 }
 
 async function create(movie) {
-    const movie = new Movie();
+    const movieInstance = new Movie();
 
-    const newMovie = await movie.build({
+    const newMovie = await movieInstance.build({
         id: uniqid(),
         ...movie
     }).save();
